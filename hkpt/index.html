@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esercizio JavaScript</title>
+</head>
+<body>
+
+<h1>Esercizio Diagrammi di Flusso in JS</h1>
+
+<script>
+// Traccia 1: Presentazione utente
+let nome = prompt("Inserisci il tuo nome:");
+let cognome = prompt("Inserisci il tuo cognome:");
+let messaggio = `Ciao, mi chiamo ${nome} ${cognome}.`;
+console.log(messaggio);
+alert(messaggio);
+
+// Traccia 2: Inserimento password con controllo
+const passwordCorretta = "segreta123";
+let passwordInserita;
+
+do {
+passwordInserita = prompt("Inserisci la password:");
+if (passwordInserita !== passwordCorretta) {
+alert("Password errata. Riprova.");
+}
+} while (passwordInserita !== passwordCorretta);
+
+alert("Accesso consentito!");
+</script>
+</body>
+</html>
