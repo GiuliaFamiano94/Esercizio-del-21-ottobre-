@@ -1,0 +1,41 @@
+/* Custom CSS per personalizzare e rendere coerente lo stile */
+
+/* Sfondo hero gradiente scuro */
+.bg-gradient-custom {
+background: linear-gradient(180deg, #000000 0%, #212529 100%);
+border-bottom: 2px solid #ffc107;
+}
+
+/* Transizione ed effetto hover sulle schede */
+.card {
+transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2) !important;
+}
+
+/* Adattamento immagini delle card */
+.card-img-top {
+height: 200px;
+object-fit: cover;
+}
+
+/* Personalizzazione barra di scorrimento */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+background: #ffc107;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #e0a800;
+}

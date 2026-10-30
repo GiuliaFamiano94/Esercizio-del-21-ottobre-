@@ -1,0 +1,84 @@
+/* Reset di base */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* 1. NAVBAR PERSONALIZZATA FISSATA IN ALTO (Senza usare la navbar di Bootstrap) */
+.custom-navbar {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 70px;
+background-color: rgba(20, 20, 20, 0.95);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 50px;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-navbar .nav-logo a {
+color: #ffc107;
+font-size: 1.5rem;
+font-weight: bold;
+text-decoration: none;
+}
+
+.custom-navbar .nav-links {
+list-style: none;
+display: flex;
+gap: 25px;
+margin: 0;
+}
+
+.custom-navbar .nav-links a {
+color: #ffffff;
+text-decoration: none;
+font-size: 1rem;
+transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-links a:hover {
+color: #ffc107;
+}
+
+/* 2. HERO SECTION (Header grande quanto tutta la pagina: 100vh) */
+.hero-section {
+height: 100vh;
+width: 100%;
+/* Sfondo a tema paesaggio/cibo siciliano con overlay scuro */
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+padding-top: 70px; /* Spazio per non far coprire il contenuto dalla navbar fissa */
+}
+
+/* Gestione delle immagini delle ricette con la classe img-fluid di Bootstrap */
+.recipe-img {
+height: 220px;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+.recipe-img:hover {
+transform: scale(1.05);
+cursor: pointer;
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+.custom-navbar {
+padding: 0 20px;
+}
+
+.custom-navbar .nav-links {
+gap: 15px;
+}
+
+.custom-navbar .nav-links a {
+font-size: 0.9rem;
+}
+}

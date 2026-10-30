@@ -1,0 +1,170 @@
+/* Reset di base */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #333;
+color: #fff;
+padding: 1rem 2rem;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.navbar .logo {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+.nav-links a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+color: #ffcc00;
+}
+
+/* Header 100vh con Linear Gradient opacizzato */
+.hero {
+height: 100vh;
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url('https://picsum.photos/1920/1080?random=10') no-repeat center center/cover;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+}
+
+.hero-content h1 {
+font-size: 3rem;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Main Container e Griglia Articoli */
+.container {
+max-width: 1200px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+.container h2 {
+text-align: center;
+margin-bottom: 30px;
+font-size: 2rem;
+color: #333;
+}
+
+/* Griglia desktop: articoli uno accanto all'altro */
+.articles-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.team-grid {
+grid-template-columns: repeat(3, 1fr);
+}
+
+.card, .team-card {
+background: #f9f9f9;
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+display: flex;
+flex-direction: column;
+}
+
+.card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+
+.card-body {
+padding: 15px;
+}
+
+.card-body h3 {
+margin-bottom: 10px;
+font-size: 1.2rem;
+}
+
+.card-body ol {
+padding-left: 20px;
+}
+
+.card-body a {
+color: #0066cc;
+text-decoration: none;
+}
+
+.card-body a:hover {
+text-decoration: underline;
+}
+
+/* Stile per Chi Siamo (foto arrotondata) */
+.team-card {
+align-items: center;
+text-align: center;
+padding: 20px;
+}
+
+.rounded-img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+
+/* --- MEDIA QUERY PER SMARTPHONE (Responsive) --- */
+@media screen and (max-width: 768px) {
+/* Navbar a colonna su mobile se necessario, o ridotta */
+.navbar {
+flex-direction: column;
+gap: 10px;
+}
+
+.nav-links {
+flex-direction: row;
+gap: 15px;
+font-size: 0.9rem;
+}
+
+/* Gli articoli non più uno accanto all'altro, ma uno sotto l'altro che occupano tutto lo spazio */
+.articles-grid, .team-grid {
+grid-template-columns: 1fr;
+}
+
+.hero-content h1 {
+font-size: 2rem;
+padding: 0 15px;
+}
+}

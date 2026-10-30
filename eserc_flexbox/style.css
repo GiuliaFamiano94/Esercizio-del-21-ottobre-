@@ -1,0 +1,15 @@
+.flex box{
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.child{
+    height: 100px;
+    width: 100px;
+    border: 1px solid white
+     
+    
+}

@@ -1,0 +1,30 @@
+* {
+  font-family: Arial, sans-serif;}
+
+  h1, h2, h3 {font-family: Georgia, 'Times New Roman', Times, serif;}
+
+  body {margin: 0;}
+
+  nav, footer {background-color: orange; padding: 16px; text-align: center;}
+
+  nav a {color: white; margin: 0 16px; text-decoration: none;}
+
+  footer p {color: white; margin: 4px 0;}
+
+  header {height: 100vh; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(giraffe.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;}
+
+header h1 {
+    color: white; font-size: 80px;
+}
+section h2 {text-align: center;}
+
+.animal {display: flex; gap: 20px; padding: 20px; width: 33%;}
+#img1 {height: 200px; width: 200px;}
+#img2 {height: 200px; width: 200px;}
+.bg {height:100vh; background-image: linear-gradient ( rgba(0,0,0,0.8)), url(./giraffe.jpg);}
